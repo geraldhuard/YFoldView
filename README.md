@@ -95,8 +95,8 @@ YFoldView is an simple and easy-to-use class for iOS UIView. YFoldView provide f
 
 
 ## Demo
-(see demo video on [Vimeo](http://vimeo.com/42979668))
-(see demo video on [Vimeo](http://vimeo.com/42979668))
+(see demo video on [Vimeo](http://vimeo.com/44810879))
+(see demo video on [Vimeo](http://vimeo.com/44810878))
 
 ## Credit
 YFoldView is brought to you by [Yooneo (Gerald HUARD)(http://www.yooneo.com/)
