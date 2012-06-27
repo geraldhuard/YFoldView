@@ -18,11 +18,11 @@ YFoldView is an simple and easy-to-use class for iOS UIView. YFoldView provide f
 
 ### Close view transition
 
-YFoldView* folding=[YFoldView closeView:self.view 
-     		       withNumberOfFold:5 
-    			          onWay:yFoldViewBottomToTop 
-		   	       duration:2 
-	      		   withDelegate:self];
+	YFoldView* folding=[YFoldView closeView:self.view 
+     			       withNumberOfFold:5 
+    				          onWay:yFoldViewBottomToTop 
+		   		       duration:2 
+	      		   	withDelegate:self];
 
 
 ### Open view transition:
