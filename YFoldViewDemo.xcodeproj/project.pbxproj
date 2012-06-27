@@ -13,6 +13,10 @@
 		74E79AB3159B1B1600806EC8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74E79AB1159B1B1600806EC8 /* InfoPlist.strings */; };
 		74E79AB5159B1B1600806EC8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E79AB4159B1B1600806EC8 /* main.m */; };
 		74E79AB9159B1B1600806EC8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E79AB8159B1B1600806EC8 /* AppDelegate.m */; };
+		74E79AC6159B1C9500806EC8 /* img.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E79AC5159B1C9500806EC8 /* img.png */; };
+		74E79AC7159B2E6C00806EC8 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E79AC4159B1BCF00806EC8 /* RootViewController.m */; };
+		74E79AC8159B2E6C00806EC8 /* YFoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E79AC2159B1BB800806EC8 /* YFoldView.m */; };
+		74E79ACA159B2E8700806EC8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E79AC9159B2E8700806EC8 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +24,18 @@
 		74E79AA8159B1B1600806EC8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74E79AAA159B1B1600806EC8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		74E79AAC159B1B1600806EC8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		74E79AB0159B1B1600806EC8 /* YFoldViewDemo-Info.plist */ = {isa = PBXFileReference; path = "YFoldViewDemo-Info.plist"; sourceTree = "<group>"; };
+		74E79AB0159B1B1600806EC8 /* YFoldViewDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YFoldViewDemo-Info.plist"; sourceTree = "<group>"; };
 		74E79AB2159B1B1600806EC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74E79AB4159B1B1600806EC8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		74E79AB6159B1B1600806EC8 /* YFoldViewDemo-Prefix.pch */ = {isa = PBXFileReference; path = "YFoldViewDemo-Prefix.pch"; sourceTree = "<group>"; };
-		74E79AB7159B1B1600806EC8 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		74E79AB6159B1B1600806EC8 /* YFoldViewDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YFoldViewDemo-Prefix.pch"; sourceTree = "<group>"; };
+		74E79AB7159B1B1600806EC8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		74E79AB8159B1B1600806EC8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		74E79AC1159B1BB800806EC8 /* YFoldView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YFoldView.h; sourceTree = "<group>"; };
+		74E79AC2159B1BB800806EC8 /* YFoldView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YFoldView.m; sourceTree = "<group>"; };
+		74E79AC3159B1BCF00806EC8 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		74E79AC4159B1BCF00806EC8 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		74E79AC5159B1C9500806EC8 /* img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img.png; sourceTree = "<group>"; };
+		74E79AC9159B2E8700806EC8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74E79ACA159B2E8700806EC8 /* QuartzCore.framework in Frameworks */,
 				74E79AA9159B1B1600806EC8 /* UIKit.framework in Frameworks */,
 				74E79AAB159B1B1600806EC8 /* Foundation.framework in Frameworks */,
 				74E79AAD159B1B1600806EC8 /* CoreGraphics.framework in Frameworks */,
@@ -62,6 +73,7 @@
 		74E79AA7159B1B1600806EC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				74E79AC9159B2E8700806EC8 /* QuartzCore.framework */,
 				74E79AA8159B1B1600806EC8 /* UIKit.framework */,
 				74E79AAA159B1B1600806EC8 /* Foundation.framework */,
 				74E79AAC159B1B1600806EC8 /* CoreGraphics.framework */,
@@ -72,8 +84,13 @@
 		74E79AAE159B1B1600806EC8 /* YFoldViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				74E79AC5159B1C9500806EC8 /* img.png */,
 				74E79AB7159B1B1600806EC8 /* AppDelegate.h */,
 				74E79AB8159B1B1600806EC8 /* AppDelegate.m */,
+				74E79AC3159B1BCF00806EC8 /* RootViewController.h */,
+				74E79AC4159B1BCF00806EC8 /* RootViewController.m */,
+				74E79AC1159B1BB800806EC8 /* YFoldView.h */,
+				74E79AC2159B1BB800806EC8 /* YFoldView.m */,
 				74E79AAF159B1B1600806EC8 /* Supporting Files */,
 			);
 			path = YFoldViewDemo;
@@ -142,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74E79AB3159B1B1600806EC8 /* InfoPlist.strings in Resources */,
+				74E79AC6159B1C9500806EC8 /* img.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +170,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74E79AC7159B2E6C00806EC8 /* RootViewController.m in Sources */,
+				74E79AC8159B2E6C00806EC8 /* YFoldView.m in Sources */,
 				74E79AB5159B1B1600806EC8 /* main.m in Sources */,
 				74E79AB9159B1B1600806EC8 /* AppDelegate.m in Sources */,
 			);
@@ -222,6 +242,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YFoldViewDemo/YFoldViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "YFoldViewDemo/YFoldViewDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -233,6 +254,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YFoldViewDemo/YFoldViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "YFoldViewDemo/YFoldViewDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
