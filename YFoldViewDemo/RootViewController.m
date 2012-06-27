@@ -33,7 +33,7 @@
     tapgr.numberOfTapsRequired=2;
     
     [self.view addGestureRecognizer:tapgr];
-    _foldView=[YFoldView create:self.view numberOfFold:4 withWay:yFoldViewBottomToTop];
+    _foldView=[YFoldView create:self.view numberOfFold:4 withWay:yFoldViewRightToLeft];
     _foldView.tag=0;
     
 }

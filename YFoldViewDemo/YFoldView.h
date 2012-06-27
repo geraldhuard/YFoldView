@@ -23,11 +23,54 @@ typedef enum{
 @protocol YFoldViewDelegate <NSObject>
 
 @optional
+
+/**
+ Called when the view ids totally opened
+ @param foldview : YFoldView Class
+ @param view : the UIView Object used
+ @param opened : YES if it's opened
+ */
 -(void) yfoldview:(YFoldView*)foldview view:(UIView*)view isOpen:(BOOL)opened;
+
+/**
+ Called when the view is totally closed
+ @param foldview : YFoldView Class
+ @param view : the UIView Object used
+ @param opened : YES if it's opened
+ */
 -(void) yfoldview:(YFoldView*)foldview view:(UIView*)view isClose:(BOOL)closed;
+
+/**
+ Called when the height of the view changed
+ @param foldview : YFoldView Class
+ @param view : the UIView Object used
+ @param h : current height of view:w
+ */
 -(void) yfoldview:(YFoldView*)foldview view:(UIView*)view heightChanged:(CGFloat)h;
+
+/**
+ Called when the width of the view changed
+ @param foldview : YFoldView Class
+ @param view : the UIView Object used
+ @param w : current width of view:w
+ */
 -(void) yfoldview:(YFoldView*)foldview view:(UIView*)view widthChanged:(CGFloat)w;
+
+/**
+ Called when the size (width or height) of the view changed
+ @param foldview : YFoldView Class
+ @param view : the UIView Object used
+ @param size : current size:w
+ */
 -(void) yfoldview:(YFoldView*)foldview view:(UIView*)view sizeChanged:(CGSize)size;
+
+
+/**
+ Called when animation finished
+ @param foldview : YFoldView Class
+ @param view : the UIView Object used
+ @param finished : YES when finished
+ */
 -(void) yfoldview:(YFoldView*)foldview view:(UIView*)view animFinished:(BOOL)finished;
 
 
