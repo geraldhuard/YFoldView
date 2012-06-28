@@ -52,6 +52,7 @@
     if (self) {
         _view=view;
         _way=way;
+        _folded=NO;
         _initialSizeView=_view.frame.size;
         _currentSize=_initialSizeView;
         _numberOfFolds=parts;
@@ -70,20 +71,14 @@
         UIImage *viewSnapShot = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
 
-        for (CALayer *l in _view.layer.sublayers){
-            [l removeFromSuperlayer];
-        }
-        [_view.layer setNeedsDisplay];
-        _view.layer.borderColor=[UIColor redColor].CGColor;
-        _view.layer.borderWidth=1;
-        
-        
+                
         CATransform3D transform = CATransform3DIdentity;
         transform.m34 = -1.0/700.0;
-        _main3DLayer = [CALayer layer];
+        _main3DLayer = [[CALayer layer] retain];
         _main3DLayer.frame = _view.bounds;
         _main3DLayer.backgroundColor = [UIColor colorWithWhite:0.2 alpha:0.0].CGColor;
         _main3DLayer.sublayerTransform = transform;
+        [_main3DLayer setHidden:YES];
         [_view.layer addSublayer:_main3DLayer];
 
     
@@ -179,6 +174,9 @@
 -(void) horizontalFoldWithHeight:(CGFloat)height andForce:(BOOL)force{
     [self initialize];
     
+    if (height+10>=_initialSizeView.height)height=_initialSizeView.height;
+
+    
     if (_currentSize.height!=height || force){
         _currentSize.height=height;
         if (_currentSize.height<=_initialSizeView.height){
@@ -198,6 +196,14 @@
             [_delegate yfoldview:self view:_view sizeChanged:_currentSize];
         }
    }
+    
+    if (height==_initialSizeView.height){
+        [self folded:NO];
+    }
+    
+    if (height<_initialSizeView.height){
+        [self folded:YES];
+    }
 }
 
 
@@ -207,6 +213,9 @@
 
 -(void) verticalFoldWithWidth:(CGFloat)width andForce:(BOOL)force{
     [self initialize];
+    
+    if (width+10>=_initialSizeView.width)width=_initialSizeView.width;
+
     
     if (_currentSize.width!=width || force){
         _currentSize.width=width;
@@ -231,6 +240,12 @@
     
     }
     
+    if (width==_initialSizeView.width){
+        [self folded:NO];
+    }
+    if (width<_initialSizeView.width){
+        [self folded:YES];
+    }
 }
 
 
@@ -285,6 +300,42 @@
     
 }
 
+
+-(void) folded:(BOOL)folded{
+    [self initialize];
+
+    
+    
+    if (folded != _folded){
+        _folded=folded;
+
+
+        if (_folded){
+            for (int i=0;i<[_view.layer.sublayers count] ;i++){
+                [[_view.layer.sublayers objectAtIndex:i] setHidden:YES];
+            }
+
+            [_main3DLayer setHidden:NO];
+            
+            NSLog(@"View folded");
+        }else{
+            
+            for (int i=0;i<[_view.layer.sublayers count] ;i++){
+                [[_view.layer.sublayers objectAtIndex:i] setHidden:NO];
+            }
+
+            [_main3DLayer setHidden:YES];
+            
+
+            
+            
+            NSLog(@"View Opened");
+            //[_main3DLayer removeFromSuperlayer];
+        }
+    }
+    [_view.layer setNeedsDisplay];
+
+}
 
 
 -(void) setPropertyToLayer:(CALayer*)layer withShadow:(CALayer*)shadow withHeight:(CGFloat)height ofIdx:(NSInteger)idx{

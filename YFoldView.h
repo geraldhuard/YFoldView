@@ -82,6 +82,8 @@ typedef enum{
     
     id<YFoldViewDelegate>   _delegate;
     
+    BOOL                    _folded;
+    
     YFoldViewWay            _way;
     
     NSInteger               _tag;
